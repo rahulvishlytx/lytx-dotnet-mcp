@@ -1,0 +1,13 @@
+@LytxStandardsDemoApi_HostAddress = http://localhost:5085
+
+### Entity summary request
+GET {{LytxStandardsDemoApi_HostAddress}}/entities/44444444-4444-4444-4444-444444444444/summary
+x-demo-user-id: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+x-demo-root-group-id: 11111111-1111-1111-1111-111111111111
+x-demo-company-id: 101
+
+### Missing entity
+GET {{LytxStandardsDemoApi_HostAddress}}/entities/99999999-9999-9999-9999-999999999999/summary
+x-demo-user-id: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+x-demo-root-group-id: 11111111-1111-1111-1111-111111111111
+x-demo-company-id: 101

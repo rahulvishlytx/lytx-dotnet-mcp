@@ -1,0 +1,123 @@
+{
+  "version": "1.0.0",
+  "title": "Company Engineering Standards Catalog",
+  "description": "Segmented company standards for context-aware AI coding workflows.",
+  "rawInstructionSources": [
+    {
+      "id": "legacy-copilot-instructions",
+      "title": "Legacy Copilot Instructions",
+      "path": "mcp/copilot-instructions.md",
+      "description": "Original instruction source supplied by engineering. Use this as the raw source reference while curated documents become the maintained knowledge base."
+    }
+  ],
+  "categories": [
+    {
+      "id": "messaging",
+      "title": "Messaging & Eventing",
+      "description": "Standards for SQS consumers and Kafka publishers."
+    },
+    {
+      "id": "security",
+      "title": "Security & Access",
+      "description": "Authentication and authorization rules."
+    },
+    {
+      "id": "platform",
+      "title": "Platform & Runtime",
+      "description": "Feature toggles, logging, and operational standards."
+    },
+    {
+      "id": "integration",
+      "title": "Integrations",
+      "description": "External service access and storage patterns."
+    },
+    {
+      "id": "data",
+      "title": "Data Access & Result Patterns",
+      "description": "Database access and service result conventions."
+    }
+  ],
+  "documents": [
+    {
+      "id": "aws-sqs",
+      "title": "AWS SQS Standards",
+      "category": "messaging",
+      "path": "mcp/knowledge/standards/documents/messaging/aws-sqs.md",
+      "tags": ["aws", "sqs", ".net", "consumer", "handler"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 10
+    },
+    {
+      "id": "aws-kafka",
+      "title": "AWS Kafka Standards",
+      "category": "messaging",
+      "path": "mcp/knowledge/standards/documents/messaging/aws-kafka.md",
+      "tags": ["aws", "kafka", ".net", "producer", "events"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 20
+    },
+    {
+      "id": "authentication",
+      "title": "Authentication Standards",
+      "category": "security",
+      "path": "mcp/knowledge/standards/documents/security/authentication.md",
+      "tags": ["authentication", "authorization", "controller", "api", ".net"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 30
+    },
+    {
+      "id": "feature-toggles",
+      "title": "Feature Toggle Standards",
+      "category": "platform",
+      "path": "mcp/knowledge/standards/documents/platform/feature-toggles.md",
+      "tags": ["feature-toggle", "feature-management", "rollout", "safe-release"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 40
+    },
+    {
+      "id": "rest-api-accessor",
+      "title": "REST API Accessor Standards",
+      "category": "integration",
+      "path": "mcp/knowledge/standards/documents/integration/rest-api-accessor.md",
+      "tags": ["rest", "networking", "integration", "accessor"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 50
+    },
+    {
+      "id": "s3-storage",
+      "title": "S3 Storage Standards",
+      "category": "integration",
+      "path": "mcp/knowledge/standards/documents/integration/s3-storage.md",
+      "tags": ["s3", "aws", "storage", "compression"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 60
+    },
+    {
+      "id": "logging",
+      "title": "Logging Standards",
+      "category": "platform",
+      "path": "mcp/knowledge/standards/documents/platform/logging.md",
+      "tags": ["logging", "observability", "transaction-logger"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 70
+    },
+    {
+      "id": "database-access",
+      "title": "Database Access Standards",
+      "category": "data",
+      "path": "mcp/knowledge/standards/documents/data/database-access.md",
+      "tags": ["database", "postgresql", "mongodb", "data-access"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 80
+    },
+    {
+      "id": "result-pattern",
+      "title": "Result Pattern Standards",
+      "category": "data",
+      "path": "mcp/knowledge/standards/documents/data/result-pattern.md",
+      "tags": ["result", "error-handling", "service-layer", "controller"],
+      "source": "mcp/copilot-instructions.md",
+      "order": 90
+    }
+  ]
+}
