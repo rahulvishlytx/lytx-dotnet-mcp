@@ -2,6 +2,7 @@ using System.Text.Json;
 using LytxDotNetStandard.McpServer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ModelContextProtocol;
 using ModelContextProtocol.AspNetCore;
@@ -46,6 +47,15 @@ builder.Services
     .AddAuthorizationFilters();
 
 var app = builder.Build();
+
+app.MapGet("/", () => Results.Ok(new
+{
+    name = "lytx-dotnet-standard-mcp-server",
+    version = "0.1.0",
+    protocol = "mcp",
+    endpoint = "/mcp",
+    description = "Company engineering standards MCP server"
+}));
 
 app.MapMcp("/mcp");
 
